@@ -7,8 +7,14 @@
       margin:10px;
     }
     button{
-      background-color: gray;
-      color:white;  
+      background-color: #808080da;
+      color:white; 
+      padding:16px; 
+      border:none;
+      margin:0;
+      font-size:20px;
+      font-weight:bold;
+    
     }
   </style>
 </head>
@@ -61,7 +67,7 @@
   </button>
 
   <button onclick="
-  updateCalculation('-');
+  updateCalculation(' - ');
   "
   >
     -
@@ -90,7 +96,7 @@
   </button>
 
   <button onclick="
-  updateCalculation('*');
+  updateCalculation(' * ');
   "
   >
     *
@@ -118,7 +124,7 @@
   </button>
 
   <button onclick="
-  updateCalculation('/');
+  updateCalculation(' / ');
   "
   >
     /
