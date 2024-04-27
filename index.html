@@ -7,7 +7,7 @@
       margin:10px;
     }
     button{
-      background-color: #808080da;
+      background-color: #808080e1;
       color:white; 
       padding:16px; 
       border:none;
@@ -19,6 +19,7 @@
   </style>
 </head>
 <body>
+  <p class="js-result"></p>
   <button onclick="
     updateCalculation('1'); 
     ">
@@ -118,7 +119,7 @@
 
   <button onclick="
   calculation=eval(calculation);
-  console.log(calculation);
+  document.querySelector('.js-result').innerHTML=calculation;
   ">
     =
   </button>
@@ -134,8 +135,8 @@
     let calculation=localStorage.getItem('calculation') || '';
     function updateCalculation(value){
       calculation+=value;
-      console.log(calculation);
-      localStorage.getItem('calculation',calculation)
+     document.querySelector('.js-result').innerHTML=calculation;
+     localStorage.setItem('calculation',calculation)
     }
   </script>
 </body>
