@@ -1,40 +1,11 @@
+</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Calculator</title>
-  <style>
-     body {
-        font-family: Arial;
-        background-color: rgb(0, 0, 0);
-      }
-    .calculation {
-        color: white;
-        font-size: 45px;
-        margin-top: 15px;
-        margin-bottom: 5px;
-      }
-   .calculator-button{
-        height: 60px;
-        width: 60px;
-        border-radius: 60px;
-        border: none;
-        font-size: 26px;
-        cursor: pointer;
-        margin-right: 5px;
-  
-    }
-    .gray-button {
-        background-color: rgb(51, 51, 51);
-        color: white;
-      }
-    .orange-button{
-      background-color: rgb(254, 160, 10);
-      color: white;
-    }
-    .clear-button {
-        font-size: 17px;
-      }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <p class="js-result calculation"></p>
@@ -137,19 +108,7 @@
   ">clear
   </button>
 
-  <script>
-    let calculation=localStorage.getItem('calculation') || '';
-
-    function updateCalculation(value){
-      calculation+=value;
-      displayCalculation();
-     localStorage.setItem('calculation',calculation)
-    }
-
-    function displayCalculation() {
-        document.querySelector('.js-result')
-          .innerHTML = calculation;
-      }
-  </script>
+  <script src="script.js"></script>
+  
 </body>
 </html>
